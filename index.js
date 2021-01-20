@@ -11,7 +11,7 @@ class Formatter {
   static titleize(str) {
     let skipWords = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from']
     return str.split(" ").map((word, index) => {
-      if (index === 0 || skipWords.indexOf(word) == -1) {
+      if (skipWords.indexOf(word) == -1 || index === 0) {
         return this.capitalize(word)
       } else {
         return word
